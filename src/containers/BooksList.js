@@ -5,7 +5,7 @@ import Book from '../components/Book';
 
 const BookList = ({ books }) => {
   const showBooks = books.length > 0 ? (books.map(book => (
-    <Book book={book} />
+    <Book book={book} key={Math.random() * 30}/>
   ))) : null;
 
   return (
@@ -21,11 +21,7 @@ const BookList = ({ books }) => {
 };
 
 BookList.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired
+  books: PropTypes.array.isRequired
 };
 
 const mapStateToProps = ({ booksReducer: { books } }) => ({

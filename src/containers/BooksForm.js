@@ -18,7 +18,7 @@ const BooksForm = () => {
         <option disabled selected>
           Please Select Category
         </option>
-        {categories.map((category) => (
+        {categories.map(category => (
           <option value={category} key={Math.random() * 5}>
             {category}
           </option>

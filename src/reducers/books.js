@@ -1,5 +1,3 @@
-const booksReducer = initialState => (state = initialState, action) => {
-  return state;
-}
+const booksReducer = initialState => (state = initialState) => state;
 
 export default booksReducer;
