@@ -3,12 +3,12 @@ const action = {
   REMOVE_BOOK: 'REMOVE_BOOK',
 };
 
-const createBook = (book) => ({
+const createBook = book => ({
   type: action.CREATE_BOOK,
   payload: book,
 });
 
-const removeBook = (book) => ({
+const removeBook = book => ({
   type: action.REMOVE_BOOK,
   payload: book,
 });
