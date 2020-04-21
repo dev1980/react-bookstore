@@ -6,12 +6,12 @@ const { CHANGE_FILTER } = action;
 const booksReducer = (state = '', action) => {
   switch (action.type) {
     case CHANGE_FILTER:
-      if(action.payload !== 'All'){
+      if (action.payload !== 'All') {
         return action.payload;
       }
       return '';
-      
-      default:
+
+    default:
       return state;
   }
 };
