@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import actions from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+import CategoryFilter from './CategoryFilter';
 
 const { changeFilter } = actions;
 
@@ -10,8 +10,10 @@ const Header = ({ changeFilter }) => {
   const handleFilterChange = filter => changeFilter(filter);
   return(
     <header>
+    <div className="header-group">
     <h3>Bookstore CMS</h3>
     <CategoryFilter changeFilter={handleFilterChange} />
+    </div>
     </header>
   );
 }
@@ -25,7 +27,6 @@ Header.defaultProps = {
 };
 
 const mapDisptachToProps = dispatch => ({
-  removeBook: book => dispatch(removeBook(book)),
   changeFilter: filter => dispatch(changeFilter(filter)),
 });
 

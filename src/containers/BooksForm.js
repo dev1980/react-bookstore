@@ -52,8 +52,10 @@ class BooksForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Title" name="title" onChange={this.handleChange} />
-        <select name="category" onChange={this.handleChange}>
+        <h4>ADD NEW BOOK</h4>
+        <div className="form-group">
+        <input type="text" placeholder="Book Title" name="title" onChange={this.handleChange} className="input-text" />
+        <select name="category" onChange={this.handleChange} className="select-category">
           <option disabled selected>
             Please Select Category
           </option>
@@ -63,7 +65,9 @@ class BooksForm extends Component {
             </option>
           ))}
         </select>
-        <input type="submit" value="submit" />
+        <input type="submit" value="add book" className="submit-btn"/>
+        </div>
+        
       </form>
     );
   }
