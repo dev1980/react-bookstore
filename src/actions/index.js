@@ -14,8 +14,9 @@ const removeBook = book => ({
   payload: book,
 });
 
-const changeFilter = () => ({
+const changeFilter = (filter) => ({
   type: action.CHANGE_FILTER,
+  payload: filter,
 });
 
 export default { action, createBook, removeBook, changeFilter };

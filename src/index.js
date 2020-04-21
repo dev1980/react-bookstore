@@ -12,7 +12,6 @@ const initialState = {
     { id: Math.floor(Math.random() * 100).toString(), title: 'Title Two', category: 'Action' },
     { id: Math.floor(Math.random() * 100).toString(), title: 'Title Three', category: 'Kids' },
   ],
-  filter: 'All',
 };
 
 const store = createStore(rootReducer(initialState));
