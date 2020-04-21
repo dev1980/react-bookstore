@@ -6,16 +6,15 @@ import rootReducer from './reducers/index';
 import './index.css';
 import App from './components/App';
 
-const store = createStore(rootReducer);
-
 const initialState = {
-
   books: [
-    { id: Math.floor(Math.random() * 5), title: 'Title one', category: 'Sci-Fi' },
-    { id: Math.floor(Math.random() * 5), title: 'Title Two', category: 'Action' },
-    { id: Math.floor(Math.random() * 5), title: 'Title Three', category: 'Kids' },
+    { id: Math.floor(Math.random() * 100).toString(), title: 'Title one', category: 'Sci-Fi' },
+    { id: Math.floor(Math.random() * 100).toString(), title: 'Title Two', category: 'Action' },
+    { id: Math.floor(Math.random() * 100).toString(), title: 'Title Three', category: 'Kids' },
   ],
 };
+
+const store = createStore(rootReducer(initialState));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,5 +24,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-export default initialState;
