@@ -12,7 +12,7 @@ class BooksForm extends Component {
     this.state = {
       title: '',
       category: null,
-    }
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,31 +20,33 @@ class BooksForm extends Component {
   }
 
   handleChange(e) {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     this.setState({
       [name]: value,
     });
-  };
+  }
 
   reset() {
     this.setState({
       title: '',
       category: null,
-    })
-  };
+    });
+  }
 
   handleSubmit(e) {
     e.preventDefault();
+    const { createBook } = this.props;
     const { title, category } = this.state;
     const book = {
       id: Math.floor(Math.random() * 1000),
       title,
       category,
     };
-   this.props.createBook(book);
-   this.reset();
-  };
+
+    createBook(book);
+    this.reset();
+  }
 
   render() {
     const categories = [
@@ -56,7 +58,7 @@ class BooksForm extends Component {
       'Learning',
       'Sci-Fi',
     ];
-  
+
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" placeholder="Title" name="title" onChange={this.handleChange} />
@@ -74,12 +76,11 @@ class BooksForm extends Component {
       </form>
     );
   }
- 
-};
+}
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => dispatch(createBook(book)),
-})
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
 
 BooksForm.propTypes = {
   createBook: PropTypes.func,
@@ -87,6 +88,6 @@ BooksForm.propTypes = {
 
 BooksForm.defaultProps = {
   createBook: () => null,
-}
+};
 
 export default connect(null, mapDispatchToProps)(BooksForm);
