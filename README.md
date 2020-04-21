@@ -24,6 +24,14 @@ This project consist of building a simple Bookstore app using ReactJS and Redux
 -   <brham1980@gmail.com>
 -   <https://brhamresume.netlify.com/>
 
+👤 **Ferguson Iyara**
+
+-   Github: [@fegzycole](https://github.com/fegzycole)
+-   Twitter: [@FergusonIyara](https://twitter.com/fergusoniyara)
+-   Linkedin: [linkedin](https://www.linkedin.com/in/ferguson-iyara/)
+-   <fergusoniyara@gmail.com>
+-   <https://fegzycole.github.io/Ferguson-Iyara/>
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
