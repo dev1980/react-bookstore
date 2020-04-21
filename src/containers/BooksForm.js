@@ -1,32 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const BooksForm = () => {
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
+class BooksForm extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <form>
-      <input type="text" placeholder="Title" />
-      <select>
-        <option disabled selected>
-          Please Select Category
-        </option>
-        {categories.map(category => (
-          <option value={category} key={Math.random() * 5}>
-            {category}
+    this.state = {
+      title: '',
+      category: null,
+    }
+  }
+
+  render() {
+    const categories = [
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
+  
+    return (
+      <form>
+        <input type="text" placeholder="Title" />
+        <select>
+          <option disabled selected>
+            Please Select Category
           </option>
-        ))}
-      </select>
-      <input type="submit" value="submit" />
-    </form>
-  );
+          {categories.map(category => (
+            <option value={category} key={Math.random() * 5}>
+              {category}
+            </option>
+          ))}
+        </select>
+        <input type="submit" value="submit" />
+      </form>
+    );
+  }
+ 
 };
 
 export default BooksForm;
