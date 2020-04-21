@@ -10,12 +10,16 @@ const BookList = ({ books }) => {
 
   return (
     <table>
-      <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-      {showBooks}
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {showBooks}
+      </tbody>
     </table>
   );
 };
