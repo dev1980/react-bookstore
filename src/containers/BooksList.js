@@ -7,7 +7,9 @@ import CategoryFilter from '../components/CategoryFilter';
 
 const { removeBook, changeFilter } = actions;
 
-const BookList = ({ books, filter, removeBook, changeFilter }) => {
+const BookList = ({
+  books, filter, removeBook, changeFilter,
+}) => {
   const handleRemoveBook = book => removeBook(book);
 
   const bookCategory = filter === '' ? books : books.filter(book => book.category === filter);
@@ -20,21 +22,21 @@ const BookList = ({ books, filter, removeBook, changeFilter }) => {
 
   return (
     <div>
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {showBooks}
-      </tbody>
-    </table>
-    <CategoryFilter changeFilter={handleFilterChange} />
-    </div>   
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {showBooks}
+        </tbody>
+      </table>
+      <CategoryFilter changeFilter={handleFilterChange} />
+    </div>
   );
 };
 
