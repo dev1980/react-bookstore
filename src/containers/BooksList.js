@@ -7,12 +7,14 @@ import CategoryFilter from '../components/CategoryFilter';
 
 const { removeBook, changeFilter } = actions;
 
-const BookList = ({ books, removeBook, changeFilter }) => {
+const BookList = ({ books, filter, removeBook, changeFilter }) => {
   const handleRemoveBook = book => removeBook(book);
+
+  const bookCategory = filter === '' ? books : books.filter(book => book.category === filter);
 
   const handleFilterChange = filter => changeFilter(filter);
 
-  const showBooks = books.length > 0 ? (books.map(book => (
+  const showBooks = bookCategory.length > 0 ? (bookCategory.map(book => (
     <Book book={book} key={Math.random() * 30} removeBook={handleRemoveBook} />
   ))) : null;
 
@@ -44,6 +46,7 @@ BookList.propTypes = {
   })).isRequired,
   removeBook: PropTypes.func,
   changeFilter: PropTypes.func,
+  filter: PropTypes.string.isRequired,
 };
 
 BookList.defaultProps = {
@@ -56,8 +59,9 @@ const mapDisptachToProps = dispatch => ({
   changeFilter: filter => dispatch(changeFilter(filter)),
 });
 
-const mapStateToProps = ({ booksReducer: { books } }) => ({
+const mapStateToProps = ({ booksReducer: { books }, filter }) => ({
   books,
+  filter,
 });
 
 export default connect(mapStateToProps, mapDisptachToProps)(BookList);
