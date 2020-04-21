@@ -1,9 +1,10 @@
 import actions from '../actions/index';
+import initialState from '../index';
 
 const { action } = actions;
 const { CREATE_BOOK, REMOVE_BOOK } = action;
 
-const booksReducer = initialState => (state = initialState, action) => {
+const booksReducer = (state = initialState, action) => {
   switch(action.type) {
     case CREATE_BOOK:
       return {
