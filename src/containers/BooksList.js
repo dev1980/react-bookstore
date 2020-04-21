@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import actions from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-const { removeBook } = actions;
+const { removeBook, changeFilter } = actions;
 
-const BookList = ({ books, removeBook }) => {
+const BookList = ({ books, removeBook, changeFilter }) => {
   const handleRemoveBook = book => removeBook(book);
+
+  const handleFilterChange = filter => changeFilter(filter);
 
   const showBooks = books.length > 0 ? (books.map(book => (
     <Book book={book} key={Math.random() * 30} removeBook={handleRemoveBook} />
   ))) : null;
 
   return (
+    <div>
     <table>
       <thead>
         <tr>
@@ -27,6 +31,8 @@ const BookList = ({ books, removeBook }) => {
         {showBooks}
       </tbody>
     </table>
+    <CategoryFilter changeFilter={handleFilterChange} />
+    </div>   
   );
 };
 
@@ -37,14 +43,17 @@ BookList.propTypes = {
     category: PropTypes.string.isRequired,
   })).isRequired,
   removeBook: PropTypes.func,
+  changeFilter: PropTypes.func,
 };
 
 BookList.defaultProps = {
   removeBook: () => null,
+  changeFilter: () => null,
 };
 
 const mapDisptachToProps = dispatch => ({
   removeBook: book => dispatch(removeBook(book)),
+  changeFilter: filter => dispatch(changeFilter(filter)),
 });
 
 const mapStateToProps = ({ booksReducer: { books } }) => ({

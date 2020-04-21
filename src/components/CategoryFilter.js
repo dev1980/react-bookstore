@@ -1,8 +1,8 @@
 import React from 'react';
 import categories from '../utils/bookCategories';
 
-const CategoryFilter = () => (
-  <select name="category">
+const CategoryFilter = ({ changeFilter }) => (
+  <select onChange={(e) => changeFilter(e.target.value)}>
     <option>All</option>
     {categories.map(category => (
       <option key={category} value={category}>
