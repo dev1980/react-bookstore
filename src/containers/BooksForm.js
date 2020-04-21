@@ -63,9 +63,9 @@ class BooksForm extends Component {
             <option value={category} key={Math.random() * 5}>
               {category}
             </option>
-          ))}
-        </select>
-        <input type="submit" value="add book" className="submit-btn"/>
+            ))}
+          </select>
+          <input type="submit" value="add book" className="submit-btn" />
         </div>
       </form>
     );

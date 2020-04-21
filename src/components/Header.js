@@ -8,15 +8,15 @@ const { changeFilter } = actions;
 
 const Header = ({ changeFilter }) => {
   const handleFilterChange = filter => changeFilter(filter);
-  return(
+  return (
     <header>
-    <div className="header-group">
-    <h3>Bookstore CMS</h3>
-    <CategoryFilter changeFilter={handleFilterChange} />
-    </div>
+      <div className="header-group">
+        <h3>Bookstore CMS</h3>
+        <CategoryFilter changeFilter={handleFilterChange} />
+      </div>
     </header>
   );
-}
+};
 
 Header.propTypes = {
   changeFilter: PropTypes.func,
