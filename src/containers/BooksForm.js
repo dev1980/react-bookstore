@@ -54,20 +54,29 @@ class BooksForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <h4>ADD NEW BOOK</h4>
         <div className="form-group">
-        <input type="text" placeholder="Book Title" name="title" onChange={this.handleChange} className="input-text" />
-        <select name="category" onChange={this.handleChange} className="select-category">
-          <option disabled selected>
-            Please Select Category
-          </option>
-          {categories.map(category => (
-            <option value={category} key={Math.random() * 5}>
-              {category}
+          <input
+            type="text"
+            placeholder="Book Title"
+            name="title"
+            onChange={this.handleChange}
+            className="input-text"
+          />
+          <select
+            name="category"
+            onChange={this.handleChange}
+            className="select-category"
+          >
+            <option disabled selected>
+              Please Select Category
             </option>
-          ))}
-        </select>
-        <input type="submit" value="add book" className="submit-btn"/>
+            {categories.map(category => (
+              <option value={category} key={Math.random() * 5}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <input type="submit" value="add book" className="submit-btn" />
         </div>
-        
       </form>
     );
   }
