@@ -1,7 +1,7 @@
 # Bookstore - ReactJS
 This project consist of building a simple Bookstore app using ReactJS and Redux
 
-![image]()
+<img src="public/screenshot.png" width="100" >
 
 ## Technologies used
 
@@ -12,7 +12,7 @@ This project consist of building a simple Bookstore app using ReactJS and Redux
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://reactapp-bookstore.herokuapp.com/)
 
 ## Authors
 
