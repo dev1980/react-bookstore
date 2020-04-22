@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import actions from '../actions/index';
+import categories from '../utils/bookCategories';
 
 const { createBook } = actions;
 
@@ -49,21 +50,11 @@ class BooksForm extends Component {
   }
 
   render() {
-    const categories = [
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
-
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" placeholder="Title" name="title" onChange={this.handleChange} />
-        <select name="category" onChange={this.handleChange}>
-          <option disabled selected>
+        <select name="category" onChange={this.handleChange} defaultValue="Please Select Category">
+          <option disabled>
             Please Select Category
           </option>
           {categories.map(category => (
