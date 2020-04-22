@@ -12,7 +12,7 @@ const BookList = ({
 }) => {
   const handleRemoveBook = book => removeBook(book);
 
-  const bookCategory = filter === '' ? books : books.filter(book => book.category === filter);
+  const bookCategory = filter === 'All' ? books : books.filter(book => book.category === filter);
 
   const handleFilterChange = filter => changeFilter(filter);
 
