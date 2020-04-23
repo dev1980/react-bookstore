@@ -65,8 +65,10 @@ class BooksForm extends Component {
             name="category"
             onChange={this.handleChange}
             className="select-category"
+            value={this.state.category}
+            defaultValue="Please Select Category"
           >
-            <option disabled selected>
+            <option disabled>
               Please Select Category
             </option>
             {categories.map(category => (
