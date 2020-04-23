@@ -1,7 +1,7 @@
 # Bookstore - ReactJS
 This project consist of building a simple Bookstore app using ReactJS and Redux
 
-![image]()
+<img src="public/screenshot.png" >
 
 ## Technologies used
 
@@ -12,7 +12,7 @@ This project consist of building a simple Bookstore app using ReactJS and Redux
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://reactapp-bookstore.herokuapp.com/)
 
 ## Authors
 
@@ -23,6 +23,14 @@ This project consist of building a simple Bookstore app using ReactJS and Redux
 -   Linkedin: [linkedin](https://www.linkedin.com/in/dev1980/)
 -   <brham1980@gmail.com>
 -   <https://brhamresume.netlify.com/>
+
+👤 **Ferguson Iyara**
+
+-   Github: [@fegzycole](https://github.com/fegzycole)
+-   Twitter: [@FergusonIyara](https://twitter.com/fergusoniyara)
+-   Linkedin: [linkedin](https://www.linkedin.com/in/ferguson-iyara/)
+-   <fergusoniyara@gmail.com>
+-   <https://fegzycole.github.io/Ferguson-Iyara/>
 
 ## 🤝 Contributing
 

@@ -3,8 +3,8 @@ import Proptypes from 'prop-types';
 import categories from '../utils/bookCategories';
 
 const CategoryFilter = ({ changeFilter }) => (
-  <select onChange={e => changeFilter(e.target.value)}>
-    {['All', ...categories].map(category => (
+  <select onChange={e => changeFilter(e.target.value)} className="header-select">
+    {['CATEGORIES', ...categories].map(category => (
       <option key={category} value={category}>
         {category}
       </option>

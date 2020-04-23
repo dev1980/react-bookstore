@@ -3,13 +3,13 @@ import actions from '../actions/index';
 const { action } = actions;
 const { CHANGE_FILTER } = action;
 
-const filterReducer = (state = 'All', action) => {
+const filterReducer = (state = 'CATEGORIES', action) => {
   switch (action.type) {
     case CHANGE_FILTER:
-      if (action.payload !== 'All') {
+      if (action.payload !== 'CATEGORIES') {
         return action.payload;
       }
-      return 'All';
+      return 'CATEGORIES';
 
     default:
       return state;
