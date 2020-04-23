@@ -32,7 +32,7 @@ form {
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
-  color: #3d6fff;
+  color: #1a93fc;
 }
 
 .header-select {
@@ -83,7 +83,7 @@ tr {
 
 .delete-btn {
   background: inherit;
-  color: #6794cc;
+  color: #1a93fc;
   border: none;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
@@ -135,7 +135,7 @@ h4 {
 .submit-btn {
   width: 120px;
   border: none;
-  background-color: #3d6fff;
+  background-color: #1a93fc;
   color: white;
   text-transform: uppercase;
   font-family: 'Roboto Slab', serif;
