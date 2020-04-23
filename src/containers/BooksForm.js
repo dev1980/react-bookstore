@@ -50,6 +50,8 @@ class BooksForm extends Component {
   }
 
   render() {
+    const { category } = this.state;
+
     return (
       <form onSubmit={this.handleSubmit}>
         <h4>ADD NEW BOOK</h4>
@@ -65,7 +67,7 @@ class BooksForm extends Component {
             name="category"
             onChange={this.handleChange}
             className="select-category"
-            value={this.state.category}
+            value={category}
             defaultValue="Please Select Category"
           >
             <option disabled>

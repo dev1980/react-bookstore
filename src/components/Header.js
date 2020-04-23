@@ -12,6 +12,7 @@ const Header = ({ changeFilter }) => {
     <header>
       <div className="header-group">
         <h3>Bookstore CMS</h3>
+        <h5>BOOK</h5>
         <CategoryFilter changeFilter={handleFilterChange} />
       </div>
     </header>

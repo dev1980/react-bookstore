@@ -17,9 +17,16 @@ body {
 .header-group {
   display: flex;
   margin-left: 200px;
-  width: 550px;
+  width: 650px;
   justify-content: space-between;
   align-items: center;
+}
+
+h5 {
+  color: rgb(104, 99, 99);
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 form {
@@ -141,4 +148,41 @@ h4 {
   font-family: 'Roboto Slab', serif;
   padding: 12px 15px;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 800px) {
+  .header-group {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+  .header-select {
+    width: 30%;
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .form-group {
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  h4 {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .input-text, .select-category, .submit-btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
