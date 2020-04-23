@@ -11,7 +11,7 @@ const BookList = ({
 }) => {
   const handleRemoveBook = book => removeBook(book);
 
-  const bookCategory = filter === 'Category' ? books : books.filter(book => book.category === filter);
+  const bookCategory = filter === 'CATEGORIES' ? books : books.filter(book => book.category === filter);
 
   const showBooks = bookCategory.length > 0 ? (bookCategory.map(book => (
     <Book book={book} key={Math.random() * 30} removeBook={handleRemoveBook} />
