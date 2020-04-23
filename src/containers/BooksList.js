@@ -1,6 +1,3 @@
-/* eslint-disable no-constant-condition */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-cond-assign */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -17,6 +14,7 @@ class BookList extends Component {
 
     ref.onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
+        // eslint-disable-next-line
         if (change.type = 'added') {
           const { doc } = change;
 
@@ -34,7 +32,11 @@ class BookList extends Component {
 
   render() {
     const { books, filter, removeBook } = this.props;
-    const handleRemoveBook = book => removeBook(book);
+    const handleRemoveBook = async book => {
+      db.collection('bookstore').doc(book.id).delete()
+        .then(removeBook(book))
+        .catch(error => new Error(error.message));
+    };
     const bookCategory = filter === 'CATEGORIES' ? books : books.filter(book => book.category === filter);
 
     const showBooks = bookCategory.length > 0 ? (bookCategory.map(book => (
