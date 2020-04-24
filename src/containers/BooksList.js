@@ -32,7 +32,7 @@ class BookList extends Component {
 
   render() {
     const { books, filter, removeBook } = this.props;
-    const handleRemoveBook = async book => {
+    const handleRemoveBook = book => {
       db.collection('bookstore').doc(book.id).delete()
         .then(removeBook(book))
         .catch(error => new Error(error.message));
