@@ -10,9 +10,23 @@ This project consist of building a simple Bookstore app using ReactJS and Redux
 - CSS
 - Git
 
+## Usage
+
+- git clone https://github.com/fegzycole/react-bookstore.git
+
+- cd react-bookstore
+
+- npm install
+
+- npm start
+
 ## Live Demo
 
-[Live Demo Link](https://reactapp-bookstore.herokuapp.com/)
+[Live Demo Link](https://react-redux-bookstore.herokuapp.com/)
+
+## Testing
+
+- Coming Soon!!
 
 ## Authors
 
